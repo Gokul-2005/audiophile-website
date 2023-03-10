@@ -1,0 +1,77 @@
+.Contact{
+    background-color: transparent;
+    height: 100vh;
+    scroll-snap-align: start;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+.contactMain{
+    height: 70%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    border: 0.1vh solid black;
+    border-radius: 1vh;
+}
+.textClass{
+  width: 70%;
+    padding: 1vw;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #333;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease-in-out;
+}
+.textClass:focus{
+    outline: none;
+  box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+textarea {
+    resize: none;
+    height: 10vh;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+  }
+  #sendButton{
+    padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  color: #fff;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  }
+  #sendButton:hover{
+    background-color: #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  #sendButton:focus{
+    outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  

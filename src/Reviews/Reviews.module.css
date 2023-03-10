@@ -1,0 +1,16 @@
+.Reviews{
+    background-color: transparent;
+    height: 100vh;
+    scroll-snap-align: start;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+video{
+    border-radius: 1vh;
+    outline: none;
+    height: 70%;
+}

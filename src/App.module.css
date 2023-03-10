@@ -1,0 +1,10 @@
+.App{    
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+#App{
+  -webkit-animation: 3s linear 1;
+  animation: 3s linear 1;
+}

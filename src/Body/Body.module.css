@@ -1,0 +1,16 @@
+.Body{
+    background-color: transparent;
+    height: 100vh;
+    position: relative;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    transition: 2s;
+    width: 100%;
+}
+.Body::-webkit-scrollbar {
+    display: none;
+  }  
+.Body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
