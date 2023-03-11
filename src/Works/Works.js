@@ -8,42 +8,42 @@ export default function Works() {
         desciption : 'Full-Stack Application Node.js + Express',
         backgroundImage : 'Assets/notesScreen.png',
         link : "https://github.com/Gokul-2005/Notes-App-FullStack",
-        type : 'node,git'
+        type : 'node,git,Best'
     },{
         id:'2',
         title : 'Weather App',
         desciption : 'Web Application React Framework + API',
         backgroundImage : 'Assets/weatherApp.png',
         link : "https://weather-app-vgy.netlify.app/",
-        type : 'react,website'
+        type : 'react,website,Best'
     },{
         id:'3',
         title : 'Product Feedback App',
         desciption : 'Web Application Node.js + Express',
         backgroundImage : 'Assets/ProductFeedback.png',
         link : "https://github.com/Gokul-2005/Product-FeedBack-FullStack",
-        type : 'node,git'
+        type : 'node,git,Best'
     },{
         id:'4',
         title : 'Invoice App',
         desciption : 'Web Application Node.js + Express',
         backgroundImage : 'Assets/invoiceApp.png',
         link : "https://github.com/Gokul-2005/Invoice-App-Full-Stack-",
-        type : 'node,git'
+        type : 'node,git,Best'
     },{
         id:'5',
         title : 'Fortee',
         desciption : 'Game vanillaJS final project',
         backgroundImage : 'Assets/fortee.png',
         link : "https://fortee.netlify.app/",
-        type : 'project,website'
+        type : 'project,website,Best'
     },{
         id:'6',
         title : 'Todo App',
         desciption : 'Web Application React Framework',
         backgroundImage : 'Assets/todoApp.png',
         link : "https://todo-in-react-js.netlify.app/",
-        type : 'react,website'
+        type : 'react,website,Best'
     },{
         id:'7',
         title : 'Iteractive Comment-Section',
@@ -77,8 +77,8 @@ export default function Works() {
         title : 'audiophile ecommerce website',
         desciption : 'Fullstack Ecommerce Website',
         backgroundImage : 'Assets/audiophile.png',
-        link : "https://github.com/Gokul-2005/Job-Filtering-Asiignment",
-        type : 'assignment,git'
+        link : "https://github.com/Gokul-2005/audiophile-website-react",
+        type : 'node,git,Best'
     },{
         id:'12',
         title : 'Multiplayer Tic Tac Toe',
@@ -94,7 +94,7 @@ export default function Works() {
     const selectSort = (ele,value) => {
         console.log(value);
         for (let i = 0; i < sortParentRef.current.children.length; i++) {
-            if(value===sortParentRef.current.children[i].innerText){
+            if((sortParentRef.current.children[i].innerText).includes(value)){
                 sortParentRef.current.children[i].style.backgroundColor="black";
                 sortParentRef.current.children[i].style.color='white';
             }
@@ -104,19 +104,19 @@ export default function Works() {
             }
         }
         const tempArr = [];
-        if(ele.target.innerText==='All'){
-            projectImgArr.forEach((ele) => {if((ele.type).includes('')) tempArr.push(ele) })
+        if(value==='Best'){
+            projectImgArr.forEach((ele) => {if((ele.type).includes('Best')) tempArr.push(ele) })
         }
-        if(ele.target.innerText==='Node.js'){
+        if(value==='Node.js'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('node')) tempArr.push(ele) })
         }
-        if(ele.target.innerText==='React'){
+        if(value==='React'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('react')) tempArr.push(ele) })
         }
-        if(ele.target.innerText==='Websites'){
+        if(value==='Websites'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('website')) tempArr.push(ele) })
         }
-        if(ele.target.innerText==='Git Repos'){
+        if(value==='Git Repos'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('git')) tempArr.push(ele) })
         }
         setState(tempArr);
@@ -124,7 +124,8 @@ export default function Works() {
     }
 
     useEffect(() => {
-    },[temp])
+        selectSort("","Best")
+    },[])
 
     const showBreif = (ele) => {
         let index = ele.target.parentNode.id;
@@ -153,7 +154,7 @@ export default function Works() {
     <div className={style.Works} id='Works'>
       <h1>Works</h1>
       <div className={style.SortProjectBox} ref={sortParentRef} >
-        <button className={style.ClassForWorkButton} style={{backgroundColor:"black",color:"white"}} onClick={(event) => selectSort(event,"All")}>All</button>
+        <button className={style.ClassForWorkButton} style={{backgroundColor:"black",color:"white"}} onClick={(event) => selectSort(event,"Best")}>Best Works</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Node.js")}>Node.js</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"React")}>React</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Websites")}>Websites</button>
