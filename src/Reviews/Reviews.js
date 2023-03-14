@@ -6,7 +6,7 @@ export default function Reviews() {
     useEffect(()=>{
 
     },[tempState])
-    const videoArr = ['Assets/notesapp.mp4','Assets/productfeedback.mp4','Assets/invoiceapp.mp4','Assets/audiophile.mp4','Assets/commentsection.mp4'];
+    const videoArr = ['Assets/audiophile.mp4','Assets/notesapp.mp4','Assets/productfeedback.mp4','Assets/invoiceapp.mp4','Assets/commentsection.mp4'];
 
     const videoChange = (con,ele) => {
         if(ele==='previous'){
