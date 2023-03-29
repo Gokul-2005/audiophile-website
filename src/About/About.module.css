@@ -51,3 +51,63 @@
     height: 50vh;
     width: 40vh;
 }
+
+@media only screen and (max-width: 650px) {
+    .About{
+        background-color: transparent;
+        height: 100vh;
+        scroll-snap-align: start;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        overflow: hidden;
+    }
+    .aboutHeader{
+        margin-top: 5vh;
+    }
+    .bottom{
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .Left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Right{
+        width: 90%;
+        height: 50%;
+        overflow: hidden;
+    }
+    #profileImg{
+        height: 20vh;
+        width: 20vh;
+        margin-top: 5vh;
+    }
+    .classForAboutH3{
+        width: 100%;
+        margin-top: 3vh;
+        font-weight: 600;
+        font-size: 2vh;
+        text-align: left;
+    }
+    #downArrow{
+        width: 10vh;
+        height: 10vh;
+        margin-top: 10vh;
+        margin-right: 5vh;
+    }
+    #downArrow:hover{
+        cursor: pointer;
+    }
+    #profile{
+        height: 50vh;
+        width: 40vh;
+    }
+}

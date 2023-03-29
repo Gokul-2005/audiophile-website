@@ -1,6 +1,6 @@
 .Reviews{
     background-color: transparent;
-    height: 100vh;
+    height: 50vh;
     scroll-snap-align: start;
     width: 100vw;
     display: flex;
@@ -12,5 +12,5 @@
 video{
     border-radius: 1vh;
     outline: none;
-    height: 70%;
+    height: 30vh;
 }

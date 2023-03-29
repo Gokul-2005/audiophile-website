@@ -9,7 +9,7 @@ export default function Works() {
             desciption : 'Fullstack Website in React Framework',
             backgroundImage : 'Assets/audiophile.png',
             link : "https://github.com/Gokul-2005/audiophile-website-react",
-            type : 'node,git,Best'
+            type : 'react,git,Best'
         },
         {
         id:'2',
@@ -44,7 +44,16 @@ export default function Works() {
             type : 'node,git,Best'
         },
         {
-        id:'6',
+            id:'6',
+            title : 'MarkDown Editor',
+            desciption : 'Web Application React Framework + LocalStorage',
+            backgroundImage : 'Assets/markdown.png',
+            link : "https://markdown-editor-vgy.netlify.app/",
+            type : 'react,Best,website'
+        }
+        ,
+        {
+        id:'7',
         title : 'Weather App',
         desciption : 'Web Application React Framework + API',
         backgroundImage : 'Assets/weatherApp.png',
@@ -52,7 +61,7 @@ export default function Works() {
         type : 'react,website,Best'
         },
         {
-        id:'7',
+        id:'8',
         title : 'Todo App',
         desciption : 'Web Application React Framework',
         backgroundImage : 'Assets/todoApp.png',
@@ -60,7 +69,7 @@ export default function Works() {
         type : 'react,website,Best'
         },
         {
-        id:'8',
+        id:'9',
         title : 'Iteractive Comment-Section',
         desciption : 'FullStack Feature using database',
         backgroundImage : 'Assets/commentSection.png',
@@ -68,23 +77,23 @@ export default function Works() {
         type : 'node,git'
         },
         {
-        id:'9',
+        id:'10',
         title : 'Password Generator App',
         desciption : 'Assignment After stream seperation',
         backgroundImage : 'Assets/passwordGenerator.png',
         link : "https://password-generator-vgy.netlify.app/",
-        type : 'assignment,website'
+        type : 'vanillajs,website'
         },
         {
-        id:'10',
+        id:'11',
         title : 'Maps',
         desciption : 'Done this assignment by referred API and plugins',
         backgroundImage : 'Assets/maps.png',
         link : "https://mapcloneapi.netlify.app/",
-        type : 'assignment,website'
+        type : 'vanillajs,website'
         },
         {
-        id:'11',
+        id:'12',
         title : 'IP Tracker',
         desciption : 'Done this assignment in API & Coding challenge',
         backgroundImage : 'Assets/ipTracker.png',
@@ -92,19 +101,34 @@ export default function Works() {
         type : 'react,website'
         },
         {
-        id:'12',
+        id:'13',
         title : 'Multiplayer Tic Tac Toe',
-        desciption : 'Mini Game',
+        desciption : 'VanillaJS Assignment',
         backgroundImage : 'Assets/tictactoe.png',
         link : "https://js-009.gokul-yadhavyad.repl.co/",
-        type : 'assignment,website'
+        type : 'vanillajs,website'
+        },
+        {
+            id:'14',
+            title : 'Game Corner',
+            desciption : 'Scratch Final Project',
+            backgroundImage : 'Assets/gamecorner.png',
+            link : "https://scratch.mit.edu/projects/723145631/fullscreen/",
+            type : 'scratch,website'
+        },
+        {
+            id:'15',
+            title : 'Memory Game',
+            desciption : 'VanillaJS Assignment',
+            backgroundImage : 'Assets/memory game.png',
+            link : "https://js-010.gokul-yadhavyad.repl.co/",
+            type : 'vanillajs,website'
         }];
     const [state,setState] = useState(projectImgArr);
     const sortParentRef = useRef(null);
     const [temp,setTemp] = useState(true);
 
     const selectSort = (ele,value) => {
-        console.log(value);
         for (let i = 0; i < sortParentRef.current.children.length; i++) {
             if((sortParentRef.current.children[i].innerText).includes(value)){
                 sortParentRef.current.children[i].style.backgroundColor="black";
@@ -119,6 +143,9 @@ export default function Works() {
         if(value==='Best'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('Best')) tempArr.push(ele) })
         }
+        if(value==='Scratch'){
+            projectImgArr.forEach((ele) => {if((ele.type).includes('scratch')) tempArr.push(ele) })
+        }
         if(value==='Node.js'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('node')) tempArr.push(ele) })
         }
@@ -130,6 +157,9 @@ export default function Works() {
         }
         if(value==='Git Repos'){
             projectImgArr.forEach((ele) => {if((ele.type).includes('git')) tempArr.push(ele) })
+        }
+        if(value==='VanillaJS'){
+            projectImgArr.forEach((ele) => {if((ele.type).includes('vanillajs')) tempArr.push(ele) })
         }
         setState(tempArr);
         setTemp(!temp);
@@ -169,6 +199,8 @@ export default function Works() {
         <button className={style.ClassForWorkButton} style={{backgroundColor:"black",color:"white"}} onClick={(event) => selectSort(event,"Best")}>Best Works</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Node.js")}>Node.js</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"React")}>React</button>
+        <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"VanillaJS")}>VanillaJS</button>
+        <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Scratch")}>Scratch</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Websites")}>Websites</button>
         <button className={style.ClassForWorkButton} onClick={(event) => selectSort(event,"Git Repos")}>Git Repos</button>
       </div>
