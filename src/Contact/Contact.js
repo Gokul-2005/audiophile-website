@@ -5,7 +5,7 @@ export default function Contact() {
     const sendMail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('gmail', 'email', e.target, 'service_afoxmxy')
+        emailjs.sendForm('service_afoxmxy', 'email', e.target)
           .then((result) => {
               console.log(result.text);
           }, (error) => {
